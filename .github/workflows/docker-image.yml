@@ -18,8 +18,8 @@ jobs:
         
     
     - run: |
-        docker build -t ghcr.io/brongar/moodle22/teste: latest -f Dockerfile.
-        docker tag ghcr.io/Brongar/moodle22/teste: latest ghcr.io/brongar/moodle22/teste:${{ github.sha }}
+        docker build -t ghcr.io/brongar/moodle22: latest -f Dockerfile.
+        docker tag ghcr.io/Brongar/moodle22: latest ghcr.io/brongar/moodle22:${{ github.sha }}
     - run: |
-        docker push ghcr.io/brongar/moodle22/teste: latest
-        docker push ghcr.io/brongar/moodle22/teste:${{ github.sha }}
+        docker push ghcr.io/brongar/moodle22: latest
+        docker push ghcr.io/brongar/moodle22:${{ github.sha }}
